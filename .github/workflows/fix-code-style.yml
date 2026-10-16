@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   fix-code-style:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       # persist-credentials: true is required so `git-auto-commit-action` below
       # can push the reformatted files back to the branch.
