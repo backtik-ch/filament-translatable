@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   phpstan:
-    runs-on: ubuntu-24.04
+    runs-on: ${{ fromJSON(vars.RUNNER) }}
     strategy:
       fail-fast: false
       matrix:
