@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   run-tests:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ startsWith(matrix.os, 'ubuntu-') && fromJSON(vars.RUNNER) || matrix.os }}
     strategy:
       fail-fast: true
       matrix:
